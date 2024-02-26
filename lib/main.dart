@@ -15,14 +15,44 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Row(
-        children: [
-          Container(
-
-            color: const Color.fromARGB(255, 52, 138, 209),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(10, 20, 12, 0),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.grey[400],
+                ),
+                padding: const EdgeInsets.all(20),
+                child: const Text('body container'),
+              ),
+              const SizedBox(
+                width: 10.0,
+              ),
+              const Text('not body'),
+              const SizedBox(
+                width: 10.0,
+              ),
+              ElevatedButton(onPressed: () {}, child: const Text("button")),
+            ],
           ),
-          const Text('body')
-        ],
+          const SizedBox(
+            height: 50.0,
+          ),
+          Row(
+            children: [
+              Container(
+                  padding: const EdgeInsets.all(20),
+                  color: Colors.grey[100],
+                  child: const Text('Row2')),
+              const Text('hiiiie???')
+            ],
+          )
+        ]),
       ),
 
       /* Center(
