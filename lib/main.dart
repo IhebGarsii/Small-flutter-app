@@ -44,12 +44,14 @@ class Home extends StatelessWidget {
             height: 50.0,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
                   padding: const EdgeInsets.all(20),
                   color: Colors.grey[100],
                   child: const Text('Row2')),
-              const Text('hiiiie???')
+              const Text('hiiiie???'),
+              OutlinedButton(onPressed: () {}, child: const Text("button"))
             ],
           )
         ]),
@@ -64,7 +66,7 @@ class Home extends StatelessWidget {
       ), */
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'nono'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search')
         ],
       ),
